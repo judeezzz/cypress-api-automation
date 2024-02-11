@@ -13,7 +13,7 @@ describe("API Testing", () => {
             })
     })
 
-    it("approach1 - dynamic json object", () => {
+    it.only("approach1 - dynamic json object", () => {
         let requestBody = {
             tourist_name: Math.random().toString().substring(2),
             tourist_email: Math.random().toString().substring(2) + "@gmail.com",
@@ -28,7 +28,7 @@ describe("API Testing", () => {
             })
     })
 
-    it.only("approach1 - using fixture", () => {
+    it("approach1 - using fixture", () => {
 
         cy.fixture('tourists').then((data) => {
             const requestBody = data;
